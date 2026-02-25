@@ -98,7 +98,9 @@ export default function ArtCollage() {
             <div key={i} className="overflow-hidden">
 
               <div
-                ref={(el) => (containerRefs.current[i] = el)}
+                ref={(el) => {
+                  containerRefs.current[i] = el
+                }}
                 className="flex flex-col gap-4 will-change-transform"
                 style={{ willChange: 'transform' }}
                 >
