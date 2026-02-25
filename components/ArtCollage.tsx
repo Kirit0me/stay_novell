@@ -21,7 +21,7 @@ export default function ArtCollage() {
   const containerRefs = useRef<(HTMLDivElement | null)[]>([])
   const [cols, setCols] = useState(DESKTOP_COLS)
 
-  const images = Array.from({ length: TOTAL_IMAGES }, (_, i) => `/art/${i + 1}.jpeg`)
+  const images = Array.from({ length: TOTAL_IMAGES }, (_, i) => `/art/${i + 1}.webp`)
 
   // detect mobile columns
   useEffect(() => {
