@@ -7,6 +7,8 @@ const TOTAL_IMAGES = 54
 const DESKTOP_COLS = 5
 const MOBILE_COLS = 2
 
+const containerRefs = useRef<(HTMLDivElement | null)[]>([])
+
 function shuffle(arr: string[]) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -102,8 +104,8 @@ export default function ArtCollage() {
                   containerRefs.current[i] = el
                 }}
                 className="flex flex-col gap-4 will-change-transform"
-                style={{ willChange: 'transform' }}
-                >
+                style={{ willChange: "transform" }}
+              >
 
                 {stack.map((src, j) => (
                   <div
